@@ -1,0 +1,45 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+	<title>Goat Store!</title>
+	<?php include 'customerBackend.php';?>
+	<link rel="stylesheet" href="style.css" type="text/css">
+	<script type = "text/javascript" src = "formChecker.js"></script>
+</head>
+<body>
+
+	<form onsubmit="validateForm()" action ="customerBackend.php" method = "post">
+		<h1>Goat Store!</h1>
+
+		<!-- Goats to purchase -->
+		<div class = "b1">
+			Goat 1: $45.00
+			<input type="number" min = "0" value = "0" name="goat1"><br>
+			Goat 2: $50.00
+			<input type="number" min = "0" value = "0" name="goat2"><br>
+			Goat 3: $65.00
+			<input type="number" min = "0" value = "0" name="goat3"><br><br>
+		</div>
+
+		<div class = "b2">
+			<b>Login:</b><br>
+			<input type="email" id = "email" name="email" placeholder = "Email"><br><br>
+			<input type="text" name="password" placeholder = "Password"><br><br>
+		</div>
+
+		<div class= "b3">
+			<b>Choose shipping method:</b><br>
+			<input type = "radio" name = "shipping" value = "Free 7 day" checked> Free 7 day</br>
+			<input type = "radio" name = "shipping" value = "$50.00 over night" checked> $50.00 over night </br>
+			<input type = "radio" name = "shipping" value = "$5.00 three day" checked> $5.00 three day </br>
+		</div>
+
+
+		<br>
+		<input type = "button" onClick = "history.go(0)" value = "Reset">
+		<input type = "submit" onSubmit = " return checkForm(this)" name = "submit" placeholder = "Submit!">
+	</form>
+
+</body>
+</html>
