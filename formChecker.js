@@ -1,17 +1,18 @@
-<script>
 
   function validateForm() {
-    var email=document.getElementById(email).value;
-    var password = document.getElementById(password).value;
+    var email=document.getElementById("email").value;
+    var pass = document.getElementById("password").value;
 
-    if(password == "" || email == "") {
-      alert("Blank field is not allowed!");
+    if(pass == "" || email == "") {
+      if(email == "") {
+        alert("Blank email is not allowed!");
+      }
+      if(pass == "") {
+        alert("Blank password is not allowed!");
+      }
       return false;
     }
-    return true;
-
+    else {
+      return true;
+    }
   }
-
-
-
-</script>
