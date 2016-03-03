@@ -9,6 +9,7 @@
 </head>
 <body>
 
+	<!-- **call validateForm javascript function upon form submission -->
 	<form onsubmit = "return validateForm();" action ="customerBackend.php"  method = "post">
 		<h1>Goat Store!</h1>
 
@@ -37,6 +38,8 @@
 
 
 		<br>
+
+		<!-- Reset and Submit buttons -->
 		<input type = "button" onClick = "history.go(0)" value = "Reset"/>
 		<input type = "submit"  name = "submit" value = "submit" placeholder = "Submit!"/>
 	</form>

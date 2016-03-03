@@ -2,19 +2,24 @@
 
 echo '<link href="style.css" rel = "stylesheet" type = "text/css"/>';
 
+// Extract email, password, goat quantities, and shipping from html form
 $email = $_POST['email'];
 $password = $_POST['password'];
 $goat1 = $_POST['goat1'];
 $goat2 = $_POST['goat2'];
 $goat3 = $_POST['goat3'];
 $shipping = $_POST['shipping'];
+
+// Calculate shipping cost
 $shippingCost = 0;
 if($shipping == "Free 7 day") { $shippingCost = 0;}
 else if($shipping == "$50.00 over night") { $shippingCost = 50; }
 else if($shipping == "$5.00 three day") { $shippingCost = 5; }
 
+// Calculate total cost
 $totalCost = ($goat1 * 45) + ($goat2 * 50) + ($goat3 * 65) + ($shippingCost);
 
+// Enter if statement if submit was pressed, then print receipt
 if(isset($_POST['submit'])) {
   echo "Welcome,".$email."!"."<br>";
   echo "Here is your password: ".$password."<br>";
